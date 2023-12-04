@@ -9,6 +9,10 @@ class LoginView: UIView {
         setupVisualElements()
     }
     
+    var onRegisterTap: (() -> Void)?
+    
+    var onLoginTap: (() -> Void)?
+    
     var imageLogin = ImageDefault(image: "logo-notifica-bw")
     var imageLabel = LabelDefault(text: "Registre e gerencie as ocorrências do seu IF")
     var emailTextField = TextFieldDefault(placeholder: "E-mail")
@@ -24,8 +28,11 @@ class LoginView: UIView {
         addSubview(buttonLogar)
         addSubview(buttonRegistrar)
         
+        buttonRegistrar.addTarget(self, action: #selector(registerTap), for: .touchUpInside)
+        
+        buttonLogar.addTarget(self, action: #selector(loginTap), for: .touchUpInside)
+        
         NSLayoutConstraint.activate([
-            imageLogin.widthAnchor.constraint(equalToConstant: 274.99),
             imageLogin.heightAnchor.constraint(equalToConstant: 82.64),
             imageLogin.topAnchor.constraint(equalTo: self.topAnchor, constant: 228),
             imageLogin.centerXAnchor.constraint(equalTo: self.centerXAnchor),
@@ -63,5 +70,15 @@ class LoginView: UIView {
     
     required init(coder: NSCoder){
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc
+    private func registerTap() {
+        onRegisterTap?()
+    }
+    
+    @objc
+    private func loginTap() {
+        onLoginTap?()
     }
 }

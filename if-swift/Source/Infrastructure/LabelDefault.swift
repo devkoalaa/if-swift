@@ -4,7 +4,7 @@ import UIKit
 class LabelDefault : UILabel {
     
     init(text: String){
-        super.init(frame: .zero)
+        super.init(frame: .infinite)
         initDefault(text: text)
     }
     
