@@ -1,26 +1,25 @@
 import Foundation
 import UIKit
 
-class LoginView: UIView {
-    
-    override init (frame: CGRect){
-        super.init(frame:frame)
-        self.backgroundColor = .viewBackgroundColor
-        setupVisualElements()
-    }
-    
+class LoginView: ViewDefault {
     var onRegisterTap: (() -> Void)?
-    
     var onLoginTap: (() -> Void)?
-    
     var imageLogin = ImageDefault(image: "logo-notifica-bw")
     var imageLabel = LabelDefault(text: "Registre e gerencie as ocorrências do seu IF")
-    var emailTextField = TextFieldDefault(placeholder: "E-mail")
-    var senhaTextField = TextFieldDefault(placeholder: "Senha")
+    var emailTextField = TextFieldDefault(placeholder: "E-mail", keyboardType: .emailAddress, returnKeyType: .next)
+    var senhaTextField: TextFieldDefault = {
+        let textField = TextFieldDefault(placeholder: "Senha", keyboardType: .default, returnKeyType: .done)
+        textField.isSecureTextEntry = true
+        return textField
+    }()
     var buttonLogar = ButtonDefault(title: "LOGAR")
     var buttonRegistrar = ButtonDefault(title: "REGISTRAR")
     
-    func setupVisualElements(){
+    override func setupVisualElements(){
+        super.setupVisualElements()
+        emailTextField.delegate = self
+        senhaTextField.delegate = self
+        
         addSubview(imageLogin)
         addSubview(imageLabel)
         addSubview(emailTextField)
@@ -68,10 +67,6 @@ class LoginView: UIView {
         ])
     }
     
-    required init(coder: NSCoder){
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     @objc
     private func registerTap() {
         onRegisterTap?()
@@ -80,5 +75,17 @@ class LoginView: UIView {
     @objc
     private func loginTap() {
         onLoginTap?()
+    }
+}
+
+extension LoginView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTextField {
+            self.senhaTextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        
+        return true
     }
 }

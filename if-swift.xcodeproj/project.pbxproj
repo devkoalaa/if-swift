@@ -29,6 +29,15 @@
 		50A0B39C2AFBC1A900810FB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A0B39A2AFBC1A900810FB8 /* Main.storyboard */; };
 		50A0B39E2AFBC1B200810FB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50A0B39D2AFBC1B200810FB8 /* Assets.xcassets */; };
 		50A0B3A12AFBC1B200810FB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A0B39F2AFBC1B200810FB8 /* LaunchScreen.storyboard */; };
+		50A2334A2B20A738003BF7AE /* ViewDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A233492B20A738003BF7AE /* ViewDefault.swift */; };
+		50EE6ABE2B275022005EA320 /* NovaOcorrenciaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE6ABD2B275022005EA320 /* NovaOcorrenciaViewController.swift */; };
+		50EE6AC02B27504A005EA320 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE6ABF2B27504A005EA320 /* TabBarController.swift */; };
+		50EE6AC22B275060005EA320 /* NovaOcorrenciaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE6AC12B275060005EA320 /* NovaOcorrenciaView.swift */; };
+		50EE6AC52B2750EB005EA320 /* SobreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE6AC42B2750EB005EA320 /* SobreViewController.swift */; };
+		50EE6AC72B2750FB005EA320 /* SobreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE6AC62B2750FB005EA320 /* SobreView.swift */; };
+		50EE6AC92B275127005EA320 /* SobreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE6AC82B275127005EA320 /* SobreCoordinator.swift */; };
+		50EE6ACB2B275135005EA320 /* NovaOcorrenciaCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE6ACA2B275135005EA320 /* NovaOcorrenciaCoordinator.swift */; };
+		50EE6ACD2B275169005EA320 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE6ACC2B275169005EA320 /* TabBarCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +65,15 @@
 		50A0B39D2AFBC1B200810FB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50A0B3A02AFBC1B200810FB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50A0B3A22AFBC1B300810FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50A233492B20A738003BF7AE /* ViewDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDefault.swift; sourceTree = "<group>"; };
+		50EE6ABD2B275022005EA320 /* NovaOcorrenciaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaOcorrenciaViewController.swift; sourceTree = "<group>"; };
+		50EE6ABF2B27504A005EA320 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		50EE6AC12B275060005EA320 /* NovaOcorrenciaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaOcorrenciaView.swift; sourceTree = "<group>"; };
+		50EE6AC42B2750EB005EA320 /* SobreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreViewController.swift; sourceTree = "<group>"; };
+		50EE6AC62B2750FB005EA320 /* SobreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreView.swift; sourceTree = "<group>"; };
+		50EE6AC82B275127005EA320 /* SobreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreCoordinator.swift; sourceTree = "<group>"; };
+		50EE6ACA2B275135005EA320 /* NovaOcorrenciaCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaOcorrenciaCoordinator.swift; sourceTree = "<group>"; };
+		50EE6ACC2B275169005EA320 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +132,9 @@
 				504601C62B0253EA006AC2E4 /* LoginCoordinator.swift */,
 				5010E6092B0B998D007A2919 /* RegisterCoordinator.swift */,
 				502AA80F2B1DFF5E0080BBBE /* HomeCoordinator.swift */,
+				50EE6AC82B275127005EA320 /* SobreCoordinator.swift */,
+				50EE6ACA2B275135005EA320 /* NovaOcorrenciaCoordinator.swift */,
+				50EE6ACC2B275169005EA320 /* TabBarCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -121,6 +142,9 @@
 		504601C82B0254B2006AC2E4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				50EE6AC32B2750A9005EA320 /* Sobre */,
+				50EE6ABC2B274FD4005EA320 /* TabBar */,
+				50EE6ABB2B274DCC005EA320 /* NovaOcorrencia */,
 				502AA80A2B10EC0E0080BBBE /* Home */,
 				5010E6042B0B8E62007A2919 /* Register */,
 				5010E6032B0B8E47007A2919 /* Login */,
@@ -157,6 +181,7 @@
 				5097B8CD2B07AD83001095A8 /* LabelDefault.swift */,
 				5097B8CF2B07ADB6001095A8 /* ButtonDefault.swift */,
 				502AA8112B1E11B10080BBBE /* ViewControllerDefault.swift */,
+				50A233492B20A738003BF7AE /* ViewDefault.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -185,6 +210,32 @@
 				50A0B3A22AFBC1B300810FB8 /* Info.plist */,
 			);
 			path = "if-swift";
+			sourceTree = "<group>";
+		};
+		50EE6ABB2B274DCC005EA320 /* NovaOcorrencia */ = {
+			isa = PBXGroup;
+			children = (
+				50EE6ABD2B275022005EA320 /* NovaOcorrenciaViewController.swift */,
+				50EE6AC12B275060005EA320 /* NovaOcorrenciaView.swift */,
+			);
+			path = NovaOcorrencia;
+			sourceTree = "<group>";
+		};
+		50EE6ABC2B274FD4005EA320 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				50EE6ABF2B27504A005EA320 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		50EE6AC32B2750A9005EA320 /* Sobre */ = {
+			isa = PBXGroup;
+			children = (
+				50EE6AC42B2750EB005EA320 /* SobreViewController.swift */,
+				50EE6AC62B2750FB005EA320 /* SobreView.swift */,
+			);
+			path = Sobre;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,19 +314,28 @@
 				5010E6062B0B8E92007A2919 /* RegisterView.swift in Sources */,
 				502AA80E2B1DFF460080BBBE /* HomeViewController.swift in Sources */,
 				505C214F2B07997B0025B02B /* UIColor+.swift in Sources */,
+				50EE6AC72B2750FB005EA320 /* SobreView.swift in Sources */,
 				504601CA2B0254C2006AC2E4 /* LoginView.swift in Sources */,
+				50EE6AC52B2750EB005EA320 /* SobreViewController.swift in Sources */,
 				504601C52B0253B5006AC2E4 /* Coordinator.swift in Sources */,
 				5097B8CE2B07AD83001095A8 /* LabelDefault.swift in Sources */,
+				50EE6ACD2B275169005EA320 /* TabBarCoordinator.swift in Sources */,
 				50A0B3992AFBC1A900810FB8 /* ViewController.swift in Sources */,
 				5097B8D02B07ADB6001095A8 /* ButtonDefault.swift in Sources */,
 				504601C72B0253EA006AC2E4 /* LoginCoordinator.swift in Sources */,
 				502AA8102B1DFF5E0080BBBE /* HomeCoordinator.swift in Sources */,
 				5010E6082B0B8EA2007A2919 /* RegisterViewController.swift in Sources */,
+				50EE6ACB2B275135005EA320 /* NovaOcorrenciaCoordinator.swift in Sources */,
+				50EE6AC02B27504A005EA320 /* TabBarController.swift in Sources */,
 				50A0B3952AFBC1A900810FB8 /* AppDelegate.swift in Sources */,
 				502AA8122B1E11B10080BBBE /* ViewControllerDefault.swift in Sources */,
 				50A0B3972AFBC1A900810FB8 /* SceneDelegate.swift in Sources */,
+				50EE6ABE2B275022005EA320 /* NovaOcorrenciaViewController.swift in Sources */,
+				50A2334A2B20A738003BF7AE /* ViewDefault.swift in Sources */,
 				502AA80C2B1DFF360080BBBE /* HomeView.swift in Sources */,
+				50EE6AC22B275060005EA320 /* NovaOcorrenciaView.swift in Sources */,
 				5097B8CA2B07AC47001095A8 /* TextFieldDefault.swift in Sources */,
+				50EE6AC92B275127005EA320 /* SobreCoordinator.swift in Sources */,
 				5010E60A2B0B998D007A2919 /* RegisterCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
